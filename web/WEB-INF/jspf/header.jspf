@@ -1,0 +1,26 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<h1>Karen</h1>
+<%
+    if(request.getParameter("session.login") !=null) {
+        session.setAttribute("session.username", request.getParameter("session.username"));
+        response.sendRedirect(request.getRequestURI());
+    }else if(request.getParameter("session.logout") !=null){
+        session.removeAttribute("session.username");
+        response.sendRedirect(request.getRequestURI());
+    }
+%>
+
+<%if(session.getAttribute("session.username") !=null){%>
+<form>
+    <% session.getAttribute("session.username") %>, agora você tem acesso ao conteúdo da página!
+    <input type="submit" name="session.logout" value="Sair"/>
+    <a href="index.jsp">Index</a>
+    <a href="disciplinas.jsp">Disciplinas</a>
+</form>
+   <%}else {%> 
+<form>
+    Usuário:<input type="text" name="session.username"/>
+    <input type="submit" name="session.login" value="Logar">
+</form>
+<%}%>
