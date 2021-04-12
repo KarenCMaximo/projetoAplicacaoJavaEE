@@ -13,7 +13,7 @@
         <h1 align="center">P&aacute;gina Inicial</h1>
         <p align="center">RA:1290481922038</p>
         <p align="center">Karen Carvalho M&aacute;ximo</p>
-        <p align="center">Semestre ingresso: 2º semestre de 2019</p>
+        <p align="center">Semestre ingresso: 2 semestre de 2019</p>
         <p align="center"><a href="https://github.com/KarenCMaximo">Link perfil GitHub</a></p>
         <%}%>
     </body>
